@@ -50,7 +50,7 @@ public class ListAdapter extends BaseAdapter {
     //返回两种类型
     @Override
     public int getViewTypeCount() {
-        return 2;  //两种类型
+        return 2;
     }
 
     @Override
@@ -71,12 +71,10 @@ public class ListAdapter extends BaseAdapter {
         }else{
             holder =(ViewHolder)view.getTag();
         }
-
+        //显示文字
         holder.textView.setText(chatBeanList.get(i).getText());
-
         return view;
     }
-
     class ViewHolder {
         TextView textView;
     }
