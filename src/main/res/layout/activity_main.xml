@@ -7,10 +7,10 @@
     android:orientation="vertical"
     tools:context="com.example.testchart.MainActivity">
 
-    <ListView
+    <com.example.testchart.CustomListView
         android:id="@+id/listView"
         android:divider="@null"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
+        android:layout_height="match_parent"></com.example.testchart.CustomListView>
 
 </LinearLayout>

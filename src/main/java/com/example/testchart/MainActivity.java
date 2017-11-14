@@ -67,9 +67,6 @@ public class MainActivity extends AppCompatActivity {
             list.add(bean);
         }
         listView.setAdapter(new ListAdapter(this,list));
-
-
-
     }
 
 }

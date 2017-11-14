@@ -41,6 +41,7 @@ public class ListAdapter extends BaseAdapter {
     public long getItemId(int i) {
         return i;
     }
+
     //获取两种类型，到时候使用哪种布局
     @Override
     public int getItemViewType(int position) {
@@ -78,5 +79,6 @@ public class ListAdapter extends BaseAdapter {
     class ViewHolder {
         TextView textView;
     }
+
 
 }

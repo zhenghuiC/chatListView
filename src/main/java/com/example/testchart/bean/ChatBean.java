@@ -7,6 +7,9 @@ package com.example.testchart.bean;
  */
 
 public class ChatBean  {
+    private int type;  //类型，用于判断使用哪种布局
+    private String text;//文字描述
+
     public int getType() {
         return type;
     }
@@ -22,9 +25,5 @@ public class ChatBean  {
     public void setText(String text) {
         this.text = text;
     }
-
-    private int type;
-    private String text;
-
 
 }
