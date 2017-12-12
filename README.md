@@ -1,3 +1,5 @@
+
+自己看别人的项目学习的笔记记录，原创地址不记得了，自己学习用哦，不是盗版
 ### 一、先看效果图
 ![image](https://raw.githubusercontent.com/zhenghuiC/chatListView/master/src/main/res/mipmap-xxhdpi/listviewscroll.gif)
 
