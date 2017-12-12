@@ -1,10 +1,14 @@
 package com.example.testchart;
 
+import android.graphics.BitmapRegionDecoder;
 import android.graphics.Color;
 import android.graphics.PointF;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -22,7 +26,8 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     ListView listView;
-
+    float firstY = 0;//第一次点击的Y坐标
+    float currentY ;//当前的Y的坐标
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +72,31 @@ public class MainActivity extends AppCompatActivity {
             list.add(bean);
         }
         listView.setAdapter(new ListAdapter(this,list));
+        //获取listview的最小的滑动距离
+
+
+        final float mTouchSlop = ViewConfiguration.get(this).getScaledTouchSlop();
+        listView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                switch (motionEvent.getAction()){
+                    case MotionEvent.ACTION_DOWN:
+                        firstY =motionEvent.getY();
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        currentY =motionEvent.getY();
+                        if(currentY -firstY >mTouchSlop){
+                            Log.e("hahah","向下滑动");
+                        }else if(firstY -currentY>mTouchSlop){
+                            Log.e("hahah","向上滑动");
+                        }
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        break;
+                }
+                return false;
+            }
+        });
     }
 
 }

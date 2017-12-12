@@ -3,6 +3,8 @@ package com.example.testchart;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.widget.ListView;
 
 /**
@@ -37,4 +39,5 @@ public class CustomListView extends ListView{
         float density =metrics.density;
         mMaxOverDistance =(int)(density*mMaxOverDistance);
     }
+
 }
