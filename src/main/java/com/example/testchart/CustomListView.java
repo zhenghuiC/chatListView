@@ -33,6 +33,7 @@ public class CustomListView extends ListView{
     protected boolean overScrollBy(int deltaX, int deltaY, int scrollX, int scrollY, int scrollRangeX, int scrollRangeY, int maxOverScrollX, int maxOverScrollY, boolean isTouchEvent) {
         return super.overScrollBy(deltaX, deltaY, scrollX, scrollY, scrollRangeX, scrollRangeY, maxOverScrollX, mMaxOverDistance, isTouchEvent);
     }
+
     //获取屏幕的分辨率，使其适用所有分辨率的手机
     private void initView(){
         DisplayMetrics metrics =getResources().getDisplayMetrics();
